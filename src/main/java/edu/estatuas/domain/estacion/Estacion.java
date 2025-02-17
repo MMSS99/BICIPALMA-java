@@ -28,6 +28,18 @@ public class Estacion {
                         "\nnumeroAnclajes" + Integer.toString(numAnclajes()));
     }
 
+    private Anclaje[] anclajes(){
+         return new Anclaje[numAnclajes()];
+    }
+
+    public int anclajesLibres(){
+         int anclajesLibres = 0;
+         Anclaje[] anclajes = anclajes();
+         for(int i = 0; i < anclajes().length; i++){
+             if (anclajes[i] == null){anclajesLibres++;}
+         }
+         return anclajesLibres;
+    }
 
     @Override
     public String toString() {

@@ -17,7 +17,9 @@ public class BiciPalma {
 		System.out.println("\n **** caso TEST visualizar estado de la estacion **** \n");
 		
 		estacion.consultarEstacion();
-				
+
+
+
 		/* caso TEST visualizar anclajes libres */
 		
 		System.out.println("\n **** caso TEST visualizar anclajes libres **** \n");
@@ -26,7 +28,7 @@ public class BiciPalma {
 
 		/* caso TEST anclar bicicleta(s) */
 
-		System.out.println("\n **** caso TEST anclar bicicleta(s) **** \n");
+		/*EEEE System.out.println("\n **** caso TEST anclar bicicleta(s) **** \n");
 		
 		int[] bicicletas = {291, 292, 293, 294};
 		
@@ -36,7 +38,7 @@ public class BiciPalma {
 		}
 		*/
 		
-		for ( int id: bicicletas ){
+		/*EEEE for ( int id: bicicletas ){
 			Bicicleta bicicleta = new Bicicleta(id);
 			estacion.anclarBicicleta(bicicleta);
 		}
@@ -45,13 +47,13 @@ public class BiciPalma {
 		
 		/* caso TEST consultar bicicletas ancladas */
 		
-		System.out.println("\n **** caso TEST consultar bicicletas ancladas **** \n");
+		/*EEEE System.out.println("\n **** caso TEST consultar bicicletas ancladas **** \n");
 		
 		estacion.consultarAnclajes();
 		
 		/* caso TEST retirar bicicleta */
 		
-		System.out.println("\n **** caso TEST retirar bicicleta **** \n");
+		/*EEEE System.out.println("\n **** caso TEST retirar bicicleta **** \n");
 		
 		TarjetaUsuario tarjetaUsuario = new TarjetaUsuario("000456789", true);
 		
@@ -61,6 +63,6 @@ public class BiciPalma {
 		
 		estacion.consultarAnclajes();
 		
-		System.out.println("anclajesLibres: " + estacion.anclajesLibres());
+		System.out.println("anclajesLibres: " + estacion.anclajesLibres()); */
 	}
 }
