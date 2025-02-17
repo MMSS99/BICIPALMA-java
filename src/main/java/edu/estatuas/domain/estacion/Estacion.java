@@ -4,7 +4,6 @@ import edu.estatuas.domain.bicicleta.Bicicleta;
 import edu.estatuas.domain.tarjetaUsuario.TarjetaUsuario;
 
 import java.util.Arrays;
-import java.util.concurrent.ThreadLocalRandom;
 
 public class Estacion {
     private final int id;
@@ -47,7 +46,7 @@ public class Estacion {
     }
 
     public void anclarBicicleta(Bicicleta bicicleta){
-         Anclaje anclajeObservado = anclajes.anclajes()[anclajes.seleccionarAnclaje()]
+         Anclaje anclajeObservado = anclajes.anclajes()[anclajes.seleccionarAnclaje()];
          anclajeObservado.anclarBici(bicicleta);
          mostrarAnclaje(bicicleta, anclajeObservado);
     }
@@ -79,6 +78,18 @@ public class Estacion {
 
     }
 
+    public void consultarAnclajes(){
+         for (int index = 0; index < numAnclajes(); index++) {
+             Anclaje anclajeObservado = anclajes.anclajes()[index];
+             if (anclajeObservado.isOcupado()) {
+                 System.out.println("anclaje " + Arrays.binarySearch(anclajes.anclajes(), anclajeObservado)
+                         + " " + anclajeObservado.getBici().getId());
+             } else {
+                 System.out.println("anclaje " + Arrays.binarySearch(anclajes.anclajes(), anclajeObservado)
+                         + " libre");
+             }
+         }
+    }
 
     @Override
     public String toString() {
