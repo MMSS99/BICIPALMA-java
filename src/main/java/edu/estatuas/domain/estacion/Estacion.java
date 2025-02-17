@@ -5,7 +5,7 @@ public class Estacion {
     private final String direccion;
     private final int numeroAnclajes;
 
-     Estacion(int id, String direccion, int numeroAnclajes) {
+     public Estacion(int id, String direccion, int numeroAnclajes) {
         this.id = id;
         this.direccion = direccion;
         this.numeroAnclajes = numeroAnclajes;
@@ -17,6 +17,15 @@ public class Estacion {
 
     private String getDireccion(){
          return this.direccion;
+    }
+
+    private int numAnclajes(){return this.numeroAnclajes;}
+
+    public void consultarEstacion(){
+        System.out.println
+                ("id: " + Integer.toString(getId()) +
+                        "\ndireccion: " + getDireccion() +
+                        "\nnumeroAnclajes" + Integer.toString(numAnclajes()));
     }
 
 
