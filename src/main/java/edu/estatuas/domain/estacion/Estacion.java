@@ -3,6 +3,7 @@ package edu.estatuas.domain.estacion;
 import edu.estatuas.domain.bicicleta.Bicicleta;
 import edu.estatuas.domain.tarjetaUsuario.TarjetaUsuario;
 
+import java.util.Arrays;
 import java.util.concurrent.ThreadLocalRandom;
 
 public class Estacion {
@@ -62,6 +63,11 @@ public class Estacion {
              }
          }
 
+    }
+
+    private void mostrarBicicleta(Bicicleta bicicleta, Anclaje anclajeObservado){
+         System.out.println("bicicleta retirada: " + bicicleta.getId() + "del anclaje: "
+                 + Arrays.binarySearch(anclajes.anclajes(), anclajeObservado));
     }
 
 
