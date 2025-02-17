@@ -4,11 +4,13 @@ public class Estacion {
     private final int id;
     private final String direccion;
     private final int numeroAnclajes;
+    private final Anclajes[] anclajes;
 
      public Estacion(int id, String direccion, int numeroAnclajes) {
         this.id = id;
         this.direccion = direccion;
         this.numeroAnclajes = numeroAnclajes;
+        this.anclajes = new Anclajes[numeroAnclajes];
     }
 
     private int getId(){
@@ -28,18 +30,18 @@ public class Estacion {
                         "\nnumeroAnclajes: " + Integer.toString(numAnclajes()));
     }
 
-    private Anclaje[] anclajes(){
-         return new Anclaje[numAnclajes()];
-    }
 
     public int anclajesLibres(){
-         Anclaje[] anclajes = anclajes();
 
          int anclajesLibres = 0;
-         for(int i = 0; i < anclajes().length; i++){
+         for(int i = 0; i < anclajes.length; i++){
              if (anclajes[i] == null){anclajesLibres++;}
          }
          return anclajesLibres;
+    }
+
+    public void generarAnclaje(){
+
     }
 
     @Override
