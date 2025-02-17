@@ -25,7 +25,7 @@ public class Estacion {
         System.out.println
                 ("id: " + Integer.toString(getId()) +
                         "\ndireccion: " + getDireccion() +
-                        "\nnumeroAnclajes" + Integer.toString(numAnclajes()));
+                        "\nnumeroAnclajes: " + Integer.toString(numAnclajes()));
     }
 
     private Anclaje[] anclajes(){
