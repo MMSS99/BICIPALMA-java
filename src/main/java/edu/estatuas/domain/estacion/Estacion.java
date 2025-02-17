@@ -23,7 +23,7 @@ public class Estacion {
          return this.direccion;
     }
 
-    private int numAnclajes(){return this.anclajes.length;}
+    private int numAnclajes(){return this.anclajes.numAnclajes();}
 
     public void consultarEstacion(){
         System.out.println
@@ -36,21 +36,23 @@ public class Estacion {
     public int anclajesLibres(){
 
          int anclajesLibres = 0;
-        for (Anclajes anclajes : anclajes) {
-            if (anclajes == null) {
+        for (int index = 0; index < numAnclajes(); index++) {
+            if (anclajes.anclajes()[index] == null) {
                 anclajesLibres++;
             }
         }
          return anclajesLibres;
     }
 
-    public Anclajes generarAnclaje(){
-         return anclajes[ThreadLocalRandom.current().nextInt(0, numAnclajes())];
-    }
 
 
     @Override
     public String toString() {
-        return super.toString();
+        return "Estacion{" +
+                "id=" + id +
+                ", direccion='" + direccion + '\'' +
+                ", anclajes=" + anclajes +
+                '}';
     }
 }
+
