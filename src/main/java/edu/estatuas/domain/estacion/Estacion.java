@@ -68,12 +68,12 @@ public class Estacion {
     }
 
     private void mostrarBicicleta(Bicicleta bicicleta, Anclaje anclajeObservado){
-         System.out.println("bicicleta retirada: " + bicicleta.getId() + "del anclaje: "
+         System.out.println("bicicleta retirada: " + bicicleta.getId() + " del anclaje: "
                  + (Arrays.asList(anclajes.anclajes()).indexOf(anclajeObservado)));
     }
 
     private void mostrarAnclaje(Bicicleta bicicleta, Anclaje anclajeObservado){
-         System.out.println("bicicleta " + bicicleta.getId() + "anclada en anclaje: "
+         System.out.println("bicicleta " + bicicleta.getId() + " anclada en anclaje: "
                  + (Arrays.asList(anclajes.anclajes()).indexOf(anclajeObservado)));
 
     }
