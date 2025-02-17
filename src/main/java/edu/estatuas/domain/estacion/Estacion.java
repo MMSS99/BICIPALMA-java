@@ -38,7 +38,7 @@ public class Estacion {
 
          int anclajesLibres = 0;
         for (int index = 0; index < numAnclajes(); index++) {
-            if (anclajes.anclajes()[index] == null) {
+            if (anclajes.anclajes()[index].getBici() == null) {
                 anclajesLibres++;
             }
         }
