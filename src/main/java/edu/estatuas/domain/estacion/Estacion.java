@@ -33,8 +33,9 @@ public class Estacion {
     }
 
     public int anclajesLibres(){
-         int anclajesLibres = 0;
          Anclaje[] anclajes = anclajes();
+
+         int anclajesLibres = 0;
          for(int i = 0; i < anclajes().length; i++){
              if (anclajes[i] == null){anclajesLibres++;}
          }
