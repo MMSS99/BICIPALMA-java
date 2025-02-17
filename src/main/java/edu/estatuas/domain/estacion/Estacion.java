@@ -28,9 +28,9 @@ public class Estacion {
 
     public void consultarEstacion(){
         System.out.println
-                ("id: " + Integer.toString(getId()) +
+                ("id: " + (getId()) +
                         "\ndireccion: " + getDireccion() +
-                        "\nnumeroAnclajes: " + Integer.toString(numAnclajes()));
+                        "\nnumeroAnclajes: " + (numAnclajes()));
     }
 
 
