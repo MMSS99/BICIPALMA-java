@@ -44,6 +44,9 @@ public class Estacion {
          return anclajesLibres;
     }
 
+    public void anclarBicicleta(Bicicleta bicicleta){
+         anclajes.anclajes()[anclajes.seleccionarAnclaje()].anclarBici(bicicleta);
+    }
 
 
     @Override
