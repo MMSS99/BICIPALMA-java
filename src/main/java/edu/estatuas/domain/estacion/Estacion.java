@@ -56,12 +56,13 @@ public class Estacion {
     }
 
     public void retirarBicicleta(TarjetaUsuario tarjetaUsuario){
-         while (tarjetaUsuario.isActivada()) {
+         boolean esperandoBici = true;
+         while (tarjetaUsuario.isActivada() && esperandoBici) {
              Anclaje anclajeObservado = anclajes.anclajes()[anclajes.seleccionarAnclaje()];
              if (anclajeObservado.isOcupado()) {
-                 anclajeObservado.liberarBici();
                  mostrarBicicleta(anclajeObservado.getBici(), anclajeObservado);
-                 break;
+                 anclajeObservado.liberarBici();
+                 esperandoBici = false;
              }
          }
 
