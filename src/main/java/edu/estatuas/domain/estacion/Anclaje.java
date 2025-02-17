@@ -1,10 +1,11 @@
 package edu.estatuas.domain.estacion;
 
+import edu.estatuas.domain.bicicleta.Bicicleta;
 import edu.estatuas.domain.bicicleta.Movil;
 
 public class Anclaje {
     private boolean ocupado;
-    private Movil bici;
+    private Bicicleta bici;
 
     Anclaje() {
         this.ocupado = false;
@@ -15,11 +16,11 @@ public class Anclaje {
         return this.ocupado;
     }
 
-    public Movil getBici() {
+    public Bicicleta getBici() {
         return bici;
     }
 
-    public void anclarBici(Movil bici) {
+    public void anclarBici(Bicicleta bici) {
         this.bici = bici;
         this.ocupado = true;
     }
