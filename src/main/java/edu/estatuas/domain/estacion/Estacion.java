@@ -45,7 +45,7 @@ public class Estacion {
     }
 
     public Anclajes generarAnclaje(){
-         return anclajes[ThreadLocalRandom.current().nextInt(0, this.numAnclajes())];
+         return anclajes[ThreadLocalRandom.current().nextInt(0, numAnclajes())];
     }
 
     @Override
