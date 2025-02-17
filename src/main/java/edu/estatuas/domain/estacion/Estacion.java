@@ -69,12 +69,12 @@ public class Estacion {
 
     private void mostrarBicicleta(Bicicleta bicicleta, Anclaje anclajeObservado){
          System.out.println("bicicleta retirada: " + bicicleta.getId() + "del anclaje: "
-                 + Arrays.binarySearch(anclajes.anclajes(), anclajeObservado));
+                 + (Arrays.asList(anclajes.anclajes()).indexOf(anclajeObservado)));
     }
 
     private void mostrarAnclaje(Bicicleta bicicleta, Anclaje anclajeObservado){
          System.out.println("bicicleta " + bicicleta.getId() + "anclada en anclaje: "
-                 + Arrays.binarySearch(anclajes.anclajes(), anclajeObservado));
+                 + (Arrays.asList(anclajes.anclajes()).indexOf(anclajeObservado)));
 
     }
 
@@ -82,10 +82,10 @@ public class Estacion {
          for (int index = 0; index < numAnclajes(); index++) {
              Anclaje anclajeObservado = anclajes.anclajes()[index];
              if (anclajeObservado.isOcupado()) {
-                 System.out.println("anclaje " + Arrays.binarySearch(anclajes.anclajes(), anclajeObservado)
+                 System.out.println("anclaje " + (Arrays.asList(anclajes.anclajes()).indexOf(anclajeObservado))
                          + " " + anclajeObservado.getBici().getId());
              } else {
-                 System.out.println("anclaje " + Arrays.binarySearch(anclajes.anclajes(), anclajeObservado)
+                 System.out.println("anclaje " + (Arrays.asList(anclajes.anclajes()).indexOf(anclajeObservado))
                          + " libre");
              }
          }
