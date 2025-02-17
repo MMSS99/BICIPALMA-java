@@ -11,6 +11,7 @@ public class Anclajes {
 
     Anclajes(int cantidadAnclajes){
         this.anclajes = new Anclaje[cantidadAnclajes];
+        crearAnclajes();
     }
 
     private void crearAnclajes(){
