@@ -1,6 +1,7 @@
 package edu.estatuas.domain.estacion;
 
 import edu.estatuas.domain.bicicleta.Bicicleta;
+import edu.estatuas.domain.tarjetaUsuario.TarjetaUsuario;
 
 import java.util.concurrent.ThreadLocalRandom;
 
@@ -46,6 +47,21 @@ public class Estacion {
 
     public void anclarBicicleta(Bicicleta bicicleta){
          anclajes.anclajes()[anclajes.seleccionarAnclaje()].anclarBici(bicicleta);
+    }
+
+    public boolean leerTarjetaUsuario(TarjetaUsuario tarjetaUsuario){
+         return tarjetaUsuario.isActivada();
+    }
+
+    public void retirarBicicleta(TarjetaUsuario tarjetaUsuario){
+         while (tarjetaUsuario.isActivada()) {
+             Anclaje anclajeObservado = anclajes.anclajes()[anclajes.seleccionarAnclaje()];
+             if (anclajeObservado.isOcupado()) {
+                 anclajeObservado.liberarBici();
+                 break;
+             }
+         }
+
     }
 
 
