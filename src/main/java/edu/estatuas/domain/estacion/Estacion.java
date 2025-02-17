@@ -1,5 +1,7 @@
 package edu.estatuas.domain.estacion;
 
+import java.util.concurrent.ThreadLocalRandom;
+
 public class Estacion {
     private final int id;
     private final String direccion;
@@ -42,8 +44,8 @@ public class Estacion {
          return anclajesLibres;
     }
 
-    public void generarAnclaje(){
-
+    public Anclajes generarAnclaje(){
+         return anclajes[ThreadLocalRandom.current().nextInt(0, this.numAnclajes())];
     }
 
     @Override
