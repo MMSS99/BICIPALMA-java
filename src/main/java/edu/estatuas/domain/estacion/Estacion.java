@@ -1,18 +1,18 @@
 package edu.estatuas.domain.estacion;
 
+import edu.estatuas.domain.bicicleta.Bicicleta;
+
 import java.util.concurrent.ThreadLocalRandom;
 
 public class Estacion {
     private final int id;
     private final String direccion;
-    private final int numeroAnclajes;
-    private final Anclajes[] anclajes;
+    private final Anclajes anclajes;
 
      public Estacion(int id, String direccion, int numeroAnclajes) {
         this.id = id;
         this.direccion = direccion;
-        this.numeroAnclajes = numeroAnclajes;
-        this.anclajes = new Anclajes[numeroAnclajes];
+        this.anclajes = new Anclajes(numeroAnclajes);
     }
 
     private int getId(){
@@ -23,7 +23,7 @@ public class Estacion {
          return this.direccion;
     }
 
-    private int numAnclajes(){return this.numeroAnclajes;}
+    private int numAnclajes(){return this.anclajes.length;}
 
     public void consultarEstacion(){
         System.out.println
@@ -36,8 +36,8 @@ public class Estacion {
     public int anclajesLibres(){
 
          int anclajesLibres = 0;
-        for (Anclajes anclaje : anclajes) {
-            if (anclaje == null) {
+        for (Anclajes anclajes : anclajes) {
+            if (anclajes == null) {
                 anclajesLibres++;
             }
         }
@@ -47,6 +47,7 @@ public class Estacion {
     public Anclajes generarAnclaje(){
          return anclajes[ThreadLocalRandom.current().nextInt(0, numAnclajes())];
     }
+
 
     @Override
     public String toString() {
