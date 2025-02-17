@@ -32,6 +32,9 @@ public class Anclaje {
 
     @Override
     public String toString() {
-        return super.toString();
+        return "Anclaje{" +
+                "ocupado=" + ocupado +
+                ", bici=" + bici +
+                '}';
     }
 }
