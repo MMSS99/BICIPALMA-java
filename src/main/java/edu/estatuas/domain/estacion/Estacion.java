@@ -53,7 +53,7 @@ public class Estacion {
 
              if (anclajeObservado.getBici() == null) {
                  anclajeObservado.anclarBici(bicicleta);
-                 mostrarAnclaje(bicicleta, anclajeObservado);
+                 mostrarAnclaje(bicicleta, (Arrays.asList(anclajes.anclajes()).indexOf(anclajeObservado)+1));
                  biciAnclada = true;
              }
          }
@@ -69,7 +69,7 @@ public class Estacion {
          while (tarjetaUsuario.isActivada() && esperandoBici) {
              Anclaje anclajeObservado = anclajes.anclajes()[anclajes.seleccionarAnclaje()];
              if (anclajeObservado.isOcupado()) {
-                 mostrarBicicleta(anclajeObservado.getBici(), anclajeObservado);
+                 mostrarBicicleta(anclajeObservado.getBici(), (Arrays.asList(anclajes.anclajes()).indexOf(anclajeObservado)+1));
                  anclajeObservado.liberarBici();
                  esperandoBici = false;
              }
@@ -77,14 +77,14 @@ public class Estacion {
 
     }
 
-    private void mostrarBicicleta(Movil bicicleta, Anclaje anclajeObservado){
+    private void mostrarBicicleta(Movil bicicleta, int posicionBici){
          System.out.println("bicicleta retirada: " + bicicleta.getId() + " del anclaje: "
-                 + (Arrays.asList(anclajes.anclajes()).indexOf(anclajeObservado)));
+                 + posicionBici);
     }
 
-    private void mostrarAnclaje(Movil bicicleta, Anclaje anclajeObservado){
+    private void mostrarAnclaje(Movil bicicleta, int posicionBici){
          System.out.println("bicicleta " + bicicleta.getId() + " anclada en anclaje: "
-                 + (Arrays.asList(anclajes.anclajes()).indexOf(anclajeObservado)));
+                 + posicionBici);
 
     }
 
@@ -92,10 +92,10 @@ public class Estacion {
          for (int index = 0; index < numAnclajes(); index++) {
              Anclaje anclajeObservado = anclajes.anclajes()[index];
              if (anclajeObservado.isOcupado()) {
-                 System.out.println("anclaje " + (Arrays.asList(anclajes.anclajes()).indexOf(anclajeObservado))
+                 System.out.println("anclaje " + (Arrays.asList(anclajes.anclajes()).indexOf(anclajeObservado)+1)
                          + " " + anclajeObservado.getBici().getId());
              } else {
-                 System.out.println("anclaje " + (Arrays.asList(anclajes.anclajes()).indexOf(anclajeObservado))
+                 System.out.println("anclaje " + (Arrays.asList(anclajes.anclajes()).indexOf(anclajeObservado)+1)
                          + " libre");
              }
          }
