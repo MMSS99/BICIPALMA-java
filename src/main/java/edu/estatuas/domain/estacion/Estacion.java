@@ -47,10 +47,19 @@ public class Estacion {
          return anclajesLibres;
     }
 
-    public void anclarBicicleta(Bicicleta bicicleta){
-         Anclaje anclajeObservado = anclajes.anclajes()[anclajes.seleccionarAnclaje()];
-         anclajeObservado.anclarBici(bicicleta);
-         mostrarAnclaje(bicicleta, anclajeObservado);
+    public void anclarBicicleta(Movil bicicleta){
+         boolean biciAnclada = false;
+
+         while (!biciAnclada) {
+             Anclaje anclajeObservado = anclajes.anclajes()[anclajes.seleccionarAnclaje()];
+
+             if (anclajeObservado.getBici() == null) {
+                 anclajeObservado.anclarBici(bicicleta);
+                 mostrarAnclaje(bicicleta, anclajeObservado);
+                 biciAnclada = true;
+             }
+         }
+
     }
 
     public boolean leerTarjetaUsuario(Autenticacion tarjetaUsuario){

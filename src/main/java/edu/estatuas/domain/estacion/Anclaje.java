@@ -16,7 +16,7 @@ public class Anclaje {
     }
 
     public Movil getBici() {
-        return bici;
+        return this.bici;
     }
 
     public void anclarBici(Movil bici) {
