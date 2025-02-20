@@ -2,6 +2,7 @@ package edu.estatuas.domain.estacion;
 
 import edu.estatuas.domain.bicicleta.Bicicleta;
 import edu.estatuas.domain.bicicleta.Movil;
+import edu.estatuas.domain.tarjetaUsuario.Autenticacion;
 import edu.estatuas.domain.tarjetaUsuario.TarjetaUsuario;
 
 import java.util.Arrays;
@@ -52,11 +53,11 @@ public class Estacion {
          mostrarAnclaje(bicicleta, anclajeObservado);
     }
 
-    public boolean leerTarjetaUsuario(TarjetaUsuario tarjetaUsuario){
+    public boolean leerTarjetaUsuario(Autenticacion tarjetaUsuario){
          return tarjetaUsuario.isActivada();
     }
 
-    public void retirarBicicleta(TarjetaUsuario tarjetaUsuario){
+    public void retirarBicicleta(Autenticacion tarjetaUsuario){
          boolean esperandoBici = true;
          while (tarjetaUsuario.isActivada() && esperandoBici) {
              Anclaje anclajeObservado = anclajes.anclajes()[anclajes.seleccionarAnclaje()];

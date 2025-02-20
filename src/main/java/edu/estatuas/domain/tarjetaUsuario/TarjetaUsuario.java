@@ -1,6 +1,7 @@
 package edu.estatuas.domain.tarjetaUsuario;
 
-public class TarjetaUsuario {
+
+public class TarjetaUsuario implements Autenticacion {
     private final String id;
     private boolean activada;
 
@@ -9,6 +10,7 @@ public class TarjetaUsuario {
         this.activada = estado;
     }
 
+    @Override
     public boolean isActivada() {
         return activada;
     }
