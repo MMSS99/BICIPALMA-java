@@ -1,6 +1,7 @@
 package edu.estatuas.domain.estacion;
 
 import edu.estatuas.domain.bicicleta.Bicicleta;
+import edu.estatuas.domain.bicicleta.Movil;
 import edu.estatuas.domain.tarjetaUsuario.TarjetaUsuario;
 
 import java.util.Arrays;
@@ -68,12 +69,12 @@ public class Estacion {
 
     }
 
-    private void mostrarBicicleta(Bicicleta bicicleta, Anclaje anclajeObservado){
+    private void mostrarBicicleta(Movil bicicleta, Anclaje anclajeObservado){
          System.out.println("bicicleta retirada: " + bicicleta.getId() + " del anclaje: "
                  + (Arrays.asList(anclajes.anclajes()).indexOf(anclajeObservado)));
     }
 
-    private void mostrarAnclaje(Bicicleta bicicleta, Anclaje anclajeObservado){
+    private void mostrarAnclaje(Movil bicicleta, Anclaje anclajeObservado){
          System.out.println("bicicleta " + bicicleta.getId() + " anclada en anclaje: "
                  + (Arrays.asList(anclajes.anclajes()).indexOf(anclajeObservado)));
 

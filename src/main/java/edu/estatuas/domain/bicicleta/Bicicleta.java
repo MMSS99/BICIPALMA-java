@@ -1,6 +1,6 @@
 package edu.estatuas.domain.bicicleta;
 
-public class Bicicleta {
+public class Bicicleta implements Movil {
 
     int id;
 
@@ -8,6 +8,7 @@ public class Bicicleta {
         this.id = id;
     }
 
+    @Override
     public int getId() {
         return this.id;
     }
