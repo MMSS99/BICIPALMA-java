@@ -1,6 +1,6 @@
 package edu.estatuas.domain.estacion;
 
-import edu.estatuas.domain.bicicleta.Bicicleta;
+import edu.estatuas.domain.bicicleta.Movil;
 
 import java.util.Arrays;
 import java.util.concurrent.ThreadLocalRandom;
@@ -29,7 +29,7 @@ public class Anclajes {
         return this.anclajes.length;
     }
 
-    void ocuparAnclaje(int indiceAnclaje, Bicicleta bicicleta){
+    void ocuparAnclaje(int indiceAnclaje, Movil bicicleta){
         anclajes[indiceAnclaje].anclarBici(bicicleta);
     }
 
@@ -41,7 +41,7 @@ public class Anclajes {
         anclajes[indiceAnclaje].liberarBici();
     }
 
-    Bicicleta getBiciAt(int indiceAnclaje){
+    Movil getBiciAt(int indiceAnclaje){
         return anclajes[indiceAnclaje].getBici();
     }
 
