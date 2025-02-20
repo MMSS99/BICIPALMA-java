@@ -9,4 +9,5 @@ El programa sigue la arquitectura del siguiente diagrama UML dejando de lado la 
 ### Métodos modificados
 
 `mostrarAnclajes` y `mostrarBicicleta` en ***edu.estatuas.domain.estacion.Estacion***:
-- En vez de lanzar la posición en el array a través del print gracias a un argumento tipo Int, he tomado el objeto que debía de ser localizado en el array y he conseguido su posición a través de `(Arrays.asList(anclajes.anclajes()).indexOf(anclajeObservado))`. El resultado debería de ser el mismo. 
+~~- En vez de lanzar la posición en el array a través del print gracias a un argumento tipo Int, he tomado el objeto que debía de ser localizado en el array y he conseguido su posición a través de `(Arrays.asList(anclajes.anclajes()).indexOf(anclajeObservado))`. El resultado debería de ser el mismo.~~ 
+Ahora, los métodos reciben un integro basado en la operación indexOf, que se realiza antes de recibir el argumento para mostrar su posición.
