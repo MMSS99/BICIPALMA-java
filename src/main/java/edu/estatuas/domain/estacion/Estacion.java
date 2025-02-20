@@ -1,9 +1,7 @@
 package edu.estatuas.domain.estacion;
 
-import edu.estatuas.domain.bicicleta.Bicicleta;
 import edu.estatuas.domain.bicicleta.Movil;
 import edu.estatuas.domain.tarjetaUsuario.Autenticacion;
-import edu.estatuas.domain.tarjetaUsuario.TarjetaUsuario;
 
 import java.util.Arrays;
 
