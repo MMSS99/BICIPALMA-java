@@ -5,6 +5,8 @@ import edu.estatuas.domain.tarjetaUsuario.Autenticacion;
 
 import java.util.Arrays;
 
+import static java.util.Locale.filter;
+
 public class Estacion {
     private final int id;
     private final String direccion;
@@ -34,16 +36,9 @@ public class Estacion {
     }
 
 
-    public int anclajesLibres(){
-
-         int anclajesLibres = 0;
-        for (int index = 0; index < numAnclajes(); index++) {
-            if (anclajes.anclajes()[index].getBici() == null) {
-                anclajesLibres++;
-            }
-        }
-         return anclajesLibres;
-    }
+    public long anclajesLibres(){
+         return Arrays.stream(anclajes.anclajes()).filter(anc -> !anc.isOcupado()).count();
+     }
 
     public void anclarBicicleta(Movil bicicleta){
          boolean biciAnclada = false;
